@@ -1,0 +1,18 @@
+td.day-name{
+    width: 5%;
+    border: solid black 3px;
+
+}
+td.day-row {
+    height: 30px;
+    width: 90%;
+}
+td.day-location{
+    width: 5%;
+   
+    border: solid black 1px;
+}
+div.location{
+    height: 30px;
+    border: solid black 1px;
+}

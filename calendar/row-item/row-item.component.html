@@ -1,0 +1,23 @@
+<div class = "calendaritem" 
+[style.left]="StartPosition" 
+[style.width]="Width"
+
+(click)="OnItemClick()"
+
+>
+  Lekce Jogy
+
+</div>
+<div  class="tooltip"
+  [style.left]="StartPosition"
+  [style.display]="Tooltip ? 'inline' : 'none'"
+  (click)="OnTooltipClick()"
+
+
+
+>
+  <div><h2>Name</h2></div>
+  <div>Instructor</div>
+  <div>Time</div>
+  <div>Price</div>
+</div>
