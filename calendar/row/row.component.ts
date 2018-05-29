@@ -14,6 +14,8 @@ export class RowComponent implements OnInit {
       {start : 13, stop : 14},
       {start : 15, stop : 20}
     ];*/
+    console.log(this.content);
+    
    }
 
   @Input() content: Content[];

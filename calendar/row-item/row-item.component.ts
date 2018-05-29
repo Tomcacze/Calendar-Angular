@@ -7,28 +7,50 @@ import {Content} from '../calendar.module';
 })
 export class RowItemComponent implements OnInit {
 
+
+
+   Hour = 3600000;
   @Input() content: Content;
-  Color = false;
-  Tooltip = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   get StartPosition() {
-    return (this.content.start - 8) * (100 / 12) + '%';
+    
+    return (this.getHours(this.content.start)-8) * (100 / 12) + '%';
   }
 
   get Width() {
-    return (this.content.stop - this.content.start) * (100 / 12) + '%';
+    return (this.getHours(this.content.stop) - this.getHours(this.content.start)) * (100 / 12) + '%';
   }
 
-  OnItemClick() {
-    this.Tooltip = true;
+
+
+
+  get Slots() {
+    return this.content.SlotsTaken + "/" + this.content.SlotsMax;
   }
 
-  OnTooltipClick() {
-    this.Tooltip = false;
+  get Description() {
+    return this.content.Description;
   }
+
+  get Title() {
+    return this.content.Title;
+  }
+
+  get Time() {
+     return this.content.start.getHours() + ':' + this.content.start.getMinutes() + 
+     ' - '+ this.content.stop.getHours() + ':' + this.content.stop.getMinutes();
+    
+  }
+
+  getHours(date: Date)
+  {
+    return date.getHours() + date.getMinutes()*0.016667;
+  }
+
 
 }

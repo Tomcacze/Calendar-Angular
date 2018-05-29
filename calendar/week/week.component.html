@@ -1,38 +1,18 @@
 <div>
 <button (click)= "OnWeekMinusClick()">previous</button> 
-<span>{{WeekDays[0]}} - {{WeekDays[6]}}</span>
+<span>{{WeekDays[0] | date:'w'}}. týden  {{WeekDays[0] | date:'dd.LL'}} - {{WeekDays[6] | date:'dd.LL'}}</span>
 <button (click)= "OnWeekPlusClick()">next</button>
 
 </div>
 
-
-<table width="100%">
-  <thead>
-    <th>
-        dny
-    </th>
-    <th>
-      sál
-    </th>
-    <th>
-      <div>hodiny</div>
-    </th>
-  </thead>
-    <tr *ngFor="let day of WeekDays">
-        <td class="day-name">{{day}} </td> 
-        <td class="day-location">
-          <div class="location">Sál 1: </div>
-          <div class="location">Sál 2: </div>
-          <div class="location">Sál 3: </div>
-        </td>
-        
-        <td class="day-row" >
-                <calendar-row [content]="[{start: 10, stop: 12}, {start: 12, stop: 14}]" ></calendar-row>
-                <calendar-row [content]="[{start: 8, stop: 10}, {start: 12, stop: 14}, {start: 18, stop: 20}]" ></calendar-row>
-                <calendar-row [content]="[{start: 9, stop: 13}, {start: 19, stop: 20}]" ></calendar-row>
-        </td>
-        
-    </tr>
- 
-        
-</table>
+<div class="day" *ngFor="let day of WeekDays">
+		<div class="day-label">
+			{{day | date:'EEEE dd.LL'}}
+		</div>
+		
+		<div class="day-content">
+      <calendar-row [content]="Content" ></calendar-row>
+      
+      
+    </div>
+</div>

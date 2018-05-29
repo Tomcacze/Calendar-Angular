@@ -1,1 +1,145 @@
 /* You can add global styles to this file, and also import other style files */
+	body, html{
+		font-family: Verdana, sans-serif;
+		font-size: 11pt;
+	}
+	
+	.outer{
+		background: red;
+		width: 100px;
+		transition: all 0.5s ease;
+        
+	}
+	
+	.outer:hover > .inner{
+		display: block;
+	}
+	
+	.inner{
+		width: 150px;
+		height: 100px;
+		background: blue;
+		display: none;
+	}
+
+	.day{
+		display: table;
+		width: 100%;
+        display: block;
+	}
+	
+	.day-label{
+		width: 100px;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+
+		
+		background: rgb(100, 100, 200);
+		padding: 5px;
+		border-radius: 0px;
+		color: white;
+	}
+	
+	.day-content{
+		display: table-cell;
+	}
+	
+	.row{
+		display: table;
+		width: 100%;
+		padding: 5px;
+		height: 45px;
+		overflow: visible;
+	}
+	
+	.row:last-child {
+    	padding-bottom: 0px;
+        display: block;
+	}
+	
+	.row:first-child {
+    	padding-top: 0px;
+        display: block;
+	}
+	
+	.room-label{
+		display: table-cell;
+		min-width: 100px;
+		padding: 5px;
+		text-align: center;
+		background: rgb(220, 220, 255);
+		border-radius: 0px;
+		vertical-align: middle;
+	}
+	
+	.room-content{
+		display: table-cell;
+		position: relative;
+		background: none;
+		width: 100%;
+		overflow: visible;
+	}
+	
+	.item{
+        display: block;
+		position: absolute;
+		width: 15%;
+		text-align: center;
+		border-radius: 0px;
+		overflow: visible;
+		background: #28a745;
+		color: white;
+		cursor: pointer;
+	}
+	
+	.item-label{
+        display: block;
+		font-size: 11pt;
+	}
+	
+	.item-time{
+        display: block;
+		font-size: 9pt;
+	}
+	
+	.item-slots{
+        display: block;
+		font-size: 10pt;
+	}
+	
+	.description{
+		display: none;
+		min-width: 200px;
+		background: blue;
+		padding: 8px 12px;
+		position:relative;
+   	z-index:1000;
+		font-size: 11pt;
+		text-align: left;
+	}
+	
+	.item:hover > .description{
+		display: block;
+	}
+	
+	button{
+        display: block;
+		border: none;
+		border-radius: 4px;
+		background: #28a745;
+		color: white;
+		font-size: 12pt;
+		padding: 8px 12px;
+	}
+	
+	.bg-primary{ background: #007bff;}
+	.bg-secondary{ background: #6c757d;}
+	.bg-success{ background: #28a745;}
+	.bg-info{ background: #17a2b8;}
+	.bg-warning{ background: #ffc107;}
+	.bg-danger{ background: #dc3545;}
+	.bg-light{ background: #f8f9fa;}
+	.bg-dark{ background: #343a40;}
+	
+	.rounded{ border-radius: 4px; }

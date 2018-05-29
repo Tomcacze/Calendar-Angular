@@ -13,9 +13,16 @@ import { WeekComponent } from './week/week.component';
     WeekComponent
   ],
   declarations: [RowComponent, RowItemComponent, WeekComponent]
+  ,
+  providers: []
 })
 export class CalendarModule { }
 export interface Content {
-  start: number;
-  stop: number;
+  Title: string;
+  start: Date;
+  stop: Date;
+  SlotsMax: number;
+  SlotsTaken: number;
+  Description: string;
+
 }
